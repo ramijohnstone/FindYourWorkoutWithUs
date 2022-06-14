@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_sports",
+  "info": {
+    "singularName": "photo-sport",
+    "pluralName": "photo-sports",
+    "displayName": "PhotoSport"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "string"
+    },
+    "picture": {
+      "type": "text"
+    }
+  }
+}

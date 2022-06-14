@@ -1,12 +1,24 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Button,
+  Alert
+} from "react-native";
 import * as React from "react";
 import { HomeScreen } from "./src/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { FirstSetWorkout } from "./src/FirstSetWorkout";
+import { WarmUP } from "./src/WarmUp";
+import { Arm } from "./src/Arm";
+import { Back } from "./src/Back";
+import { Leg } from "./src/Leg";
+import { Shoulder } from "./src/Shoulder";
+import { Abs } from "./src/Abs";
 import { RootStackParamList } from "./src/RootStackParamList";
-import { LegsWorkout } from "./src/LegsWorkout";
 import { NextWorkout } from "./src/NextWorkout";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -18,14 +30,22 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: "Dream" }}
+          options={{ title: "Workout" }}
         />
-
-        <Stack.Screen name="FirstSetWorkout" component={FirstSetWorkout} />
-        <Stack.Screen name="LegsWorkout" component={LegsWorkout} />
+        <Stack.Screen name="WarmUp" component={WarmUP} />
+        <Stack.Screen name="Arm" component={Arm} />
+        <Stack.Screen name="Back" component={Back} />
+        <Stack.Screen name="Leg" component={Leg} />
+        <Stack.Screen name="Shoulder" component={Shoulder} />
+        <Stack.Screen name="Abs" component={Abs} />
         <Stack.Screen name="NextWorkout" component={NextWorkout} />
       </Stack.Navigator>
     </NavigationContainer>
+
+    // <View style={styles.container}>
+    //   <Text>Open up App.tsx to start working on your app!</Text>
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 
