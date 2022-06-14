@@ -3,8 +3,8 @@ import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import { useRoute, RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "./RootStackParamList";
 
-export const FirstSetWorkout = () => {
-  const route = useRoute<RouteProp<RootStackParamList, "FirstSetWorkout">>();
+export const Abs = () => {
+  const route = useRoute<RouteProp<RootStackParamList, "Abs">>();
 
   return (
     <View>

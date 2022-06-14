@@ -1,5 +1,5 @@
 export type RootStackParamList = {
   Home: undefined;
-  FirstSetWorkout: { name: string };
-  
+  WarmUP: { name: string };
+  Arm: { name: string };
 };
