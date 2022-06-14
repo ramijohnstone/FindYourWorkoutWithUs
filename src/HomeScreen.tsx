@@ -12,8 +12,18 @@ export const HomeScreen: FunctionComponent = () => {
   return (
     <View style={{ flex: 1 }}>
       <Button
-        title="first set of workouts"
-        onPress={() => navigation.navigate("FirstSetWorkout", { name: "RJ" })}
+        title="arms biceps and tri"
+        onPress={() => navigation.navigate("FirstSetWorkout", { name: "arms" })}
+      />
+      <Button
+        title="legs both legs"
+        onPress={() =>
+          navigation.navigate("LegsWorkout", { name: "legs FOR DAYS" })
+        }
+      />
+      <Button
+        title="My workout for today"
+        onPress={() => navigation.navigate("NextWorkout", { name: "today" })}
       />
     </View>
   );

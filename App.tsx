@@ -6,6 +6,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { FirstSetWorkout } from "./src/FirstSetWorkout";
 import { RootStackParamList } from "./src/RootStackParamList";
+import { LegsWorkout } from "./src/LegsWorkout";
+import { NextWorkout } from "./src/NextWorkout";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -16,15 +18,14 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: "Welcome" }}
+          options={{ title: "Dream" }}
         />
+
         <Stack.Screen name="FirstSetWorkout" component={FirstSetWorkout} />
+        <Stack.Screen name="LegsWorkout" component={LegsWorkout} />
+        <Stack.Screen name="NextWorkout" component={NextWorkout} />
       </Stack.Navigator>
     </NavigationContainer>
-    // <View style={styles.container}>
-    //   <Text>Open up App.tsx to start working on your app!</Text>
-    //   <StatusBar style="auto" />
-    // </View>
   );
 }
 
