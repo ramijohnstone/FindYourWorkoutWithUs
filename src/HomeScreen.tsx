@@ -27,7 +27,7 @@ export const HomeScreen: FunctionComponent = () => {
       <View style={styles.container}>
         <ScrollView style={styles.scrollView}>
           <Button
-            title="WARM UP"
+            title="WARM UP edited"
             onPress={() => navigation.navigate("WarmUp", { name: "RJ" })}
           />
           <Button
