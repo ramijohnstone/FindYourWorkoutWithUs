@@ -38,13 +38,10 @@ export const HomeScreen: FunctionComponent = () => {
       <View style={styles.container}>
         <ScrollView style={styles.scrollView}>
           <Button
-            title="WARM UP edited"
+            title="WARMUPS "
             onPress={() => navigation.navigate("WarmUp", { name: "RJ" })}
           />
-          <Button
-            title="ARM"
-            onPress={() => navigation.navigate("Arm", { name: "PJ" })}
-          />
+
           <Button
             title="BACK"
             onPress={() => navigation.navigate("Back", { name: "FJ" })}
@@ -60,6 +57,10 @@ export const HomeScreen: FunctionComponent = () => {
           <Button
             title="ABS"
             onPress={() => navigation.navigate("Abs", { name: "WJ" })}
+          />
+          <Button
+            title="Find my gym"
+            onPress={() => navigation.navigate("Salle", { name: "PJ" })}
           />
           <Button
             title="My workout for today"

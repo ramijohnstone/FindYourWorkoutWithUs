@@ -13,7 +13,7 @@ import { HomeScreen } from "./src/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { WarmUP } from "./src/WarmUp";
-import { Arm } from "./src/Arm";
+import { Salle } from "./src/Salle";
 import { Back } from "./src/Back";
 import { Leg } from "./src/Leg";
 import { Shoulder } from "./src/Shoulder";
@@ -39,7 +39,7 @@ export default function App() {
           component={HomeScreen}
         />
         <Stack.Screen name="WarmUp" component={WarmUP} />
-        <Stack.Screen name="Arm" component={Arm} />
+        <Stack.Screen name="Salle" component={Salle} />
         <Stack.Screen name="Back" component={Back} />
         <Stack.Screen name="Leg" component={Leg} />
         <Stack.Screen name="Shoulder" component={Shoulder} />
