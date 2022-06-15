@@ -50,7 +50,6 @@ export const NextWorkout = () => {
           <Text style={styles.title}> My workout for today</Text>
 
           <View style={styles.items}>
-            {/* <ScrollView style={styles.scrollview}> */}
             {workoutItems.map((item, index) => {
               return (
                 <TouchableOpacity
@@ -61,9 +60,6 @@ export const NextWorkout = () => {
                 </TouchableOpacity>
               );
             })}
-            {/* </ScrollView> */}
-            {/* <Exercice text={"i will do 10 push ups"} />
-          <Exercice text={"i will do 10 pull ups"} /> */}
           </View>
         </View>
 
