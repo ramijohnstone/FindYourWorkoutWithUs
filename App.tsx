@@ -20,6 +20,7 @@ import { Shoulder } from "./src/Shoulder";
 import { Abs } from "./src/Abs";
 import { RootStackParamList } from "./src/RootStackParamList";
 import { NextWorkout } from "./src/NextWorkout";
+import LoginPage from "./src/LoginPage";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -28,9 +29,14 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          options={{ headerShown: false }}
+          name="Login"
+          component={LoginPage}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
           name="Home"
           component={HomeScreen}
-          options={{ title: "Workout" }}
         />
         <Stack.Screen name="WarmUp" component={WarmUP} />
         <Stack.Screen name="Arm" component={Arm} />

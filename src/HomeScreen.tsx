@@ -4,17 +4,28 @@ import {
   View,
   Image,
   ImageBackground,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from "react-native";
 import { RootStackParamList } from "./RootStackParamList";
 import { FunctionComponent } from "react";
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
+import { auth } from "../firebase";
 
 export const HomeScreen: FunctionComponent = () => {
   const navigation = useNavigation<
-    NavigationProp<RootStackParamList, "FirstSetWorkout">
+    NavigationProp<RootStackParamList, "Home">
   >();
+
+  const handleSignOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        navigation.navigate("Login");
+      })
+      .catch(error => alert(error.message));
+  };
 
   return (
     <ImageBackground
@@ -57,6 +68,12 @@ export const HomeScreen: FunctionComponent = () => {
             }
           />
         </ScrollView>
+        <View style={styles.container2}>
+          <Text>Email:{auth.currentUser?.email}</Text>
+          <TouchableOpacity onPress={handleSignOut} style={styles.button}>
+            <Text style={styles.buttonText}>Sign out</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ImageBackground>
   );
@@ -64,9 +81,28 @@ export const HomeScreen: FunctionComponent = () => {
 
 const styles = StyleSheet.create({
   scrollView: {
-    flex: 1
+    flex: 1,
+    marginTop: 160
   },
   container: {
     flex: 1
+  },
+  container2: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  buttonText: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 16
+  },
+  button: {
+    backgroundColor: "#0782F9",
+    width: "60%",
+    padding: 15,
+    borderRadius: 10,
+    alignItems: "center",
+    marginTop: 40
   }
 });
