@@ -14,8 +14,8 @@ import { useRoute, RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "./RootStackParamList";
 import * as ImagePicker from "expo-image-picker";
 
-export const Abs = () => {
-  const route = useRoute<RouteProp<RootStackParamList, "Abs">>();
+export const Arm = () => {
+  const route = useRoute<RouteProp<RootStackParamList, "Arm">>();
 
   const [pickedImagePath, setPickedImagePath] = useState("");
 
@@ -62,31 +62,31 @@ export const Abs = () => {
           <Button
             title="Information"
             onPress={() =>
-              Alert.alert("Exercice Abdos\n mouvement lent et précis\n")
+              Alert.alert("Exercice Bras\n mouvement lent et précis\n")
             }
           />
         </View>
 
         <View style={styles.screen}>
-          <Text style={styles.title}>Crunch</Text>
+          <Text style={styles.title}>Curl à la barre</Text>
           <Image
             style={styles.image}
-            source={require("../assets/Abs/Capture.jpg")}
+            source={require("../assets/Arm/Capture.jpg")}
           />
-          <Text style={styles.title}>Crunch à la poulie</Text>
+          <Text style={styles.title}>Kickback</Text>
           <Image
             style={styles.image}
-            source={require("../assets/Abs/Capture1.jpg")}
+            source={require("../assets/Arm/Capture1.jpg")}
           />
-          <Text style={styles.title}>Gainage</Text>
+          <Text style={styles.title}>Curl avec haltères</Text>
           <Image
             style={styles.image}
-            source={require("../assets/Abs/Capture2.jpg")}
+            source={require("../assets/Arm/Capture2.jpg")}
           />
-          <Text style={styles.title}>Rotation du buste</Text>
+          <Text style={styles.title}>Curl à la poulie</Text>
           <Image
             style={styles.image}
-            source={require("../assets/Abs/Capture3.jpg")}
+            source={require("../assets/Arm/Capture3.jpg")}
           />
         </View>
         <Text style={styles.title}>Ajoute un Exercice</Text>

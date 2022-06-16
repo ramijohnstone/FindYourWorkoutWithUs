@@ -5,12 +5,12 @@ import * as firebase from "firebase";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA9BHN5zh3xTJ2CtskBkFGAoCk9rlin5cI",
-  authDomain: "findyourworkout-41994.firebaseapp.com",
-  projectId: "findyourworkout-41994",
-  storageBucket: "findyourworkout-41994.appspot.com",
-  messagingSenderId: "104547054275",
-  appId: "1:104547054275:web:6061455f9c375451cfa876"
+  apiKey: "AIzaSyAjeOwX06Lf1ZheQlMwzSRhuP-bqU1w5L0",
+  authDomain: "findworkout.firebaseapp.com",
+  projectId: "findworkout",
+  storageBucket: "findworkout.appspot.com",
+  messagingSenderId: "800890564451",
+  appId: "1:800890564451:web:f3661733bce90d0429ed56"
 };
 
 // Initialize Firebase

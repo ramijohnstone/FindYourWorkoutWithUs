@@ -35,6 +35,7 @@ export const HomeScreen: FunctionComponent = () => {
       }}
       style={{ width: "100%", height: "100%" }}
     >
+      <Text style={styles.title}>Welcome: {auth.currentUser?.email}</Text>
       <View style={styles.container}>
         <ScrollView style={styles.scrollView}>
           <Button
@@ -43,8 +44,8 @@ export const HomeScreen: FunctionComponent = () => {
           />
 
           <Button
-            title="BACK"
-            onPress={() => navigation.navigate("Back", { name: "FJ" })}
+            title="ARM"
+            onPress={() => navigation.navigate("Arm", { name: "FJ" })}
           />
           <Button
             title="LEG"
@@ -59,18 +60,17 @@ export const HomeScreen: FunctionComponent = () => {
             onPress={() => navigation.navigate("Abs", { name: "WJ" })}
           />
           <Button
-            title="Find my gym"
+            title="FIND MY GYM"
             onPress={() => navigation.navigate("Salle", { name: "PJ" })}
           />
           <Button
-            title="My workout for today"
+            title="MY WORKOUT FOR TODAY"
             onPress={() =>
               navigation.navigate("NextWorkout", { name: "today" })
             }
           />
         </ScrollView>
         <View style={styles.container2}>
-          <Text>Email:{auth.currentUser?.email}</Text>
           <TouchableOpacity onPress={handleSignOut} style={styles.button}>
             <Text style={styles.buttonText}>Sign out</Text>
           </TouchableOpacity>
@@ -83,7 +83,7 @@ export const HomeScreen: FunctionComponent = () => {
 const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    marginTop: 160
+    marginTop: 100
   },
   container: {
     flex: 1
@@ -105,5 +105,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
     marginTop: 40
+  },
+  title: {
+    marginTop: 70,
+    paddingVertical: 8,
+    borderWidth: 4,
+    borderColor: "#0782F9",
+    borderRadius: 10,
+    color: "white",
+    textAlign: "center",
+    fontSize: 16,
+    fontWeight: "bold"
   }
 });
