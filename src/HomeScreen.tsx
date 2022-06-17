@@ -18,14 +18,14 @@ export const HomeScreen: FunctionComponent = () => {
     NavigationProp<RootStackParamList, "Home">
   >();
 
-  // const handleSignOut = () => {
-  //   auth
-  //     .signOut()
-  //     .then(() => {
-  //       navigation.navigate("Login");
-  //     })
-  //     .catch(error => alert(error.message));
-  // };
+  const handleSignOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        navigation.navigate("Login");
+      })
+      .catch(error => alert(error.message));
+  };
 
   return (
     <ImageBackground
@@ -66,7 +66,7 @@ export const HomeScreen: FunctionComponent = () => {
             onPress={() => navigation.navigate("Salle", { name: "PJ" })}
             style={styles.button}
           >
-            <Text style={styles.buttonText}>Find my Find</Text>
+            <Text style={styles.buttonText}>Find my Gym</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => navigation.navigate("NextWorkout")}
@@ -74,9 +74,14 @@ export const HomeScreen: FunctionComponent = () => {
           >
             <Text style={styles.buttonText}>MY WORKOUT FOR TODAY</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            // onPress={handleSignOut}
+          {/* <TouchableOpacity
             onPress={() => navigation.navigate("Login", { name: "today" })}
+            style={(styles.button, styles.color)}
+          >
+            <Text style={styles.buttonText}>Options</Text>
+          </TouchableOpacity> */}
+          <TouchableOpacity
+            onPress={handleSignOut}
             style={(styles.button, styles.color)}
           >
             <Text style={styles.buttonText}>Sign out</Text>

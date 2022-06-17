@@ -18,6 +18,7 @@ import { Arm } from "./src/Arm";
 import { Leg } from "./src/Leg";
 import { Shoulder } from "./src/Shoulder";
 import { Abs } from "./src/Abs";
+// import { Options } from "./src/Options";
 import { RootStackParamList } from "./src/RootStackParamList";
 import { NextWorkout } from "./src/NextWorkout";
 import LoginPage from "./src/LoginPage";
@@ -45,6 +46,7 @@ export default function App() {
         <Stack.Screen name="Shoulder" component={Shoulder} />
         <Stack.Screen name="Abs" component={Abs} />
         <Stack.Screen name="NextWorkout" component={NextWorkout} />
+        {/* <Stack.Screen name="Options" component={Options} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
