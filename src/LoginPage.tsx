@@ -23,13 +23,14 @@ const LoginPage = () => {
   >();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user: any) => {
+    // const unsubscribe =
+    auth.onAuthStateChanged((user: any) => {
       if (user) {
         navigation.navigate("Home");
       }
     });
 
-    return unsubscribe;
+    // return unsubscribe;
   }, []);
 
   const handleSignUp = () => {

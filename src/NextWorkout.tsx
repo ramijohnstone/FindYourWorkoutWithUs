@@ -48,19 +48,20 @@ export const NextWorkout = () => {
             workout plan for {auth.currentUser?.email}
           </Text>
           <Text style={styles.title}> My workout for today</Text>
-
-          <View style={styles.items}>
-            {workoutItems.map((item, index) => {
-              return (
-                <TouchableOpacity
-                  key={index}
-                  onPress={() => deleteWorkout(index)}
-                >
-                  <Exercice text={item}></Exercice>
-                </TouchableOpacity>
-              );
-            })}
-          </View>
+          <ScrollView style={styles.scrollView}>
+            <View style={styles.items}>
+              {workoutItems.map((item, index) => {
+                return (
+                  <TouchableOpacity
+                    key={index}
+                    onPress={() => deleteWorkout(index)}
+                  >
+                    <Exercice text={item}></Exercice>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </ScrollView>
         </View>
 
         <KeyboardAvoidingView
