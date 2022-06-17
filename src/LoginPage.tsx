@@ -23,13 +23,12 @@ const LoginPage = () => {
   >();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user: any) => {
+    const unsubscribed = auth.onAuthStateChanged((user: any) => {
       if (user) {
         navigation.navigate("Home");
       }
     });
-
-    return unsubscribe;
+    return () => unsubscribed();
   }, []);
 
   const handleSignUp = () => {
@@ -43,7 +42,7 @@ const LoginPage = () => {
   };
   const handleLogin = () => {
     auth
-      .createUserWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(email, password)
       .then((userCredentials: { user: any }) => {
         const user = userCredentials.user;
         console.log("logged in with:", user.email);

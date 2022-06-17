@@ -59,19 +59,31 @@ export const HomeScreen: FunctionComponent = () => {
             title="ABS"
             onPress={() => navigation.navigate("Abs", { name: "WJ" })}
           />
-          <Button
-            title="FIND MY GYM"
-            onPress={() => navigation.navigate("Salle", { name: "PJ" })}
-          />
-          <Button
-            title="MY WORKOUT FOR TODAY"
-            onPress={() =>
-              navigation.navigate("NextWorkout", { name: "today" })
-            }
-          />
         </ScrollView>
+
         <View style={styles.container2}>
-          <TouchableOpacity onPress={handleSignOut} style={styles.button}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Salle", { name: "PJ" })}
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>Find my Gym</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("NextWorkout")}
+            style={styles.button}
+          >
+            <Text style={styles.buttonText}>MY WORKOUT FOR TODAY</Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity
+            onPress={() => navigation.navigate("Login", { name: "today" })}
+            style={(styles.button, styles.color)}
+          >
+            <Text style={styles.buttonText}>Options</Text>
+          </TouchableOpacity> */}
+          <TouchableOpacity
+            onPress={handleSignOut}
+            style={(styles.button, styles.color)}
+          >
             <Text style={styles.buttonText}>Sign out</Text>
           </TouchableOpacity>
         </View>
@@ -104,7 +116,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 10,
     alignItems: "center",
-    marginTop: 40
+    marginBottom: 10
   },
   title: {
     marginTop: 70,
@@ -116,5 +128,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 16,
     fontWeight: "bold"
+  },
+  color: {
+    backgroundColor: "#D61414",
+
+    width: "60%",
+    padding: 15,
+    borderRadius: 10,
+    alignItems: "center",
+    marginBottom: 10
   }
 });
